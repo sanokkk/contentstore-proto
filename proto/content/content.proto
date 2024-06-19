@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package content;
+option go_package = "proto.content";
+
+service ContentStorage {
+  rpc DownloadContent (GetContentRequest) returns (GetContentResponse);
+  rpc UploadContent (UploadContentRequest) returns (UploadContentResponse);
+}
+
+message GetContentRequest {
+  string contentId = 1;
+}
+
+message GetContentResponse {
+  bytes content = 1;
+}
+
+message UploadContentRequest {
+  bytes content = 1;
+}
+
+message UploadContentResponse {
+  string contentId = 1;
+}
