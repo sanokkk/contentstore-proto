@@ -1,4 +1,4 @@
-module github.com/sanokkktrain/contentstore-proto
+module github.com/sanokkk/contentstore-proto
 
 go 1.22rc2
 
